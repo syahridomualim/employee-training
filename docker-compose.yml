@@ -2,7 +2,7 @@ version: '1.0'
 services:
   app:
     build:
-      context: .
+      context: ./
       dockerfile: Dockerfile
     container_name: app
     depends_on:
