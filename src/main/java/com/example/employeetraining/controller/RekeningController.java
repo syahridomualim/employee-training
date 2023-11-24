@@ -7,13 +7,16 @@ import com.example.employeetraining.model.request.UpdateRekeningRequest;
 import com.example.employeetraining.model.response.GeneralResponse;
 import com.example.employeetraining.model.response.RekeningResponse;
 import com.example.employeetraining.service.RekeningService;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
+
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/rekenings")
+@SecurityRequirement(name = "Bearer Authentication")
 @RequiredArgsConstructor
 public class RekeningController {
 

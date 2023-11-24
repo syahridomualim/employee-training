@@ -1,16 +1,16 @@
 package com.example.employeetraining.util;
 
 
-import jakarta.validation.ConstraintViolationException;
-import jakarta.validation.Validator;
+import javax.validation.ConstraintViolationException;
+import javax.validation.Validator;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
 public class ValidationUtil {
-    final Validator validator;
+
+    private final Validator validator;
 
     public void validate(Object obj) {
         var result = validator.validate(obj);
