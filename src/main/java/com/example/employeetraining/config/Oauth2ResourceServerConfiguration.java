@@ -23,7 +23,7 @@ public class Oauth2ResourceServerConfiguration extends ResourceServerConfigurerA
                 .csrf()
                 .disable()
                 .antMatcher("/**")
-                .authorizeRequests().antMatchers("/", "/showFile/**", "/v1/showFile/**", "/v1/upload",
+                .authorizeRequests().antMatchers("/",
                         "/user-register/**", "/swagger-ui/**",
                         "/v3/api-docs/**",
                         "/swagger-ui.html",
@@ -38,9 +38,9 @@ public class Oauth2ResourceServerConfiguration extends ResourceServerConfigurerA
                         "/web/user-register/**", "/api/v1/user-register/register-confirm-otp/**", "/api/v1/user-register/send-otp",
                         "/api/v1/user-login/login", "/api/v1/user-login/signin-google").permitAll()
                 .antMatchers("/api/v1/karyawans/**", "/api/v1/karyawan-trainings/**", "/api/v1/rekenings/**",
-                        "/api/v1/trainings/**", "/api/v1/upload").hasAnyAuthority("ROLE_ADMIN", "ROLE_SUPERUSER")
+                        "/api/v1/trainings/**", "/api/v1/file/upload", "/api/v1/file/show-file/**").hasAnyAuthority("ROLE_ADMIN", "ROLE_SUPERUSER")
                 .antMatchers("/api/v1/karyawans/**", "/api/v1/karyawan-trainings/**", "/api/v1/rekenings/**",
-                        "/api/v1/trainings/**", "/api/v1/upload")
+                        "/api/v1/trainings/**", "/api/v1/file/upload", "/api/v1/file/show-file/**")
                 .hasAnyAuthority("ROLE_USER")
                 .and()
                 .authorizeRequests()

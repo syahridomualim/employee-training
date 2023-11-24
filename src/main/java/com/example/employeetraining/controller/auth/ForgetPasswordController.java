@@ -19,7 +19,6 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 public class ForgetPasswordController {
 
-    private final PasswordEncoder passwordEncoder;
     private final UserService userService;
 
     @PostMapping("/send")

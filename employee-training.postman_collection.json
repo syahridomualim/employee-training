@@ -40,7 +40,13 @@
 					"name": "get-karyawan-by-id",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6Im11YWxpbXN5YWhyaWRvQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDA5MTE0NjgsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJlbzdFeXp5dUpzM2ZTTHZSTlUzNUlXTkJmMjQiLCJjbGllbnRfaWQiOiJteS1jbGllbnQtd2ViIn0.p8f44_caynbqfqjpDfYegWuJwESfhVnZKUaPrOkqcTg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{baseUrl}}/{{employeeUrl}}/1",
 							"host": [
@@ -58,7 +64,13 @@
 					"name": "get-all-karyawan",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6Im11YWxpbXN5YWhyaWRvQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDA5MTE0NjgsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJlbzdFeXp5dUpzM2ZTTHZSTlUzNUlXTkJmMjQiLCJjbGllbnRfaWQiOiJteS1jbGllbnQtd2ViIn0.p8f44_caynbqfqjpDfYegWuJwESfhVnZKUaPrOkqcTg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{baseUrl}}/{{employeeUrl}}?page=0&size=10",
 							"host": [
@@ -85,7 +97,13 @@
 					"name": "update-karyawan",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6Im11YWxpbXN5YWhyaWRvQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDA5MTE0NjgsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJlbzdFeXp5dUpzM2ZTTHZSTlUzNUlXTkJmMjQiLCJjbGllbnRfaWQiOiJteS1jbGllbnQtd2ViIn0.p8f44_caynbqfqjpDfYegWuJwESfhVnZKUaPrOkqcTg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"id\": 1,\r\n    \"nama\": \"Mualim Syahrido\",\r\n    \"dob\": \"1996-05-07T09:53:15.603Z\",\r\n    \"status\": \"non active\",\r\n    \"alamat\": \"Lampung\",\r\n    \"detailKaryawan\": {\r\n        \"nik\": \"2343234356\",\r\n        \"npwp\": \"584506-35\"\r\n    }\r\n}",
@@ -111,7 +129,13 @@
 					"name": "delete-karyawan",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6Im11YWxpbXN5YWhyaWRvQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDA5MTE0NjgsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJlbzdFeXp5dUpzM2ZTTHZSTlUzNUlXTkJmMjQiLCJjbGllbnRfaWQiOiJteS1jbGllbnQtd2ViIn0.p8f44_caynbqfqjpDfYegWuJwESfhVnZKUaPrOkqcTg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"id\": 1\r\n}",
@@ -132,6 +156,29 @@
 						}
 					},
 					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
@@ -518,6 +565,299 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "oauth",
+			"item": [
+				{
+					"name": "register",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mualimsyahrido@gmail.com\",\r\n    \"name\": \"Mu'alim Syahrido\",\r\n    \"phoneNumber\": \"085778862232\",\r\n    \"domicile\": \"Jakarta Timur\",\r\n    \"gender\": \"male\",\r\n    \"password\": \"password\",\r\n    \"confirmPassword\": \"password\",\r\n    \"fullName\": \"Mu'alim Syahrido\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{registerUrl}}/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"{{registerUrl}}",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "send-otp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mualimsyahrido@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{registerUrl}}/send-otp",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"{{registerUrl}}",
+										"send-otp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "confirm-otp",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/{{registerUrl}}/register-confirm-otp/054164",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"{{registerUrl}}",
+										"register-confirm-otp",
+										"054164"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mualimsyahrido@gmail.com\",\r\n    \"password\": \"newpassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{loginUrl}}/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"{{loginUrl}}",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sigin-google",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "accessToken",
+											"value": "ya29.a0AfB_byBEZs9sgoIckYd0FP_lr9-rpEZiqAwmzCbOZogKdtj7IbPGSsBwLO5fTZZOuQLNGsORl2fTQCDvnfMg_DcHj-z9Pfu-8YKO6E9GyO7xhnwhSB49v3tXoIQcGwFakJ8RSVK50gYErdT9Rhg83tQkJJvNtWrPrVRYaCgYKAY0SARESFQHGX2MiVf_He6qIoI44G2mJ1guGOA0171",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{loginUrl}}/signin-google",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"{{loginUrl}}",
+										"signin-google"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "forget-pasforsword",
+					"item": [
+						{
+							"name": "send",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mualimsyahrido@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{forgetPasswordUrl}}/send",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"{{forgetPasswordUrl}}",
+										"send"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "validate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mualimsyahrido@gmail.com\",\r\n    \"otp\": \"374961\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{forgetPasswordUrl}}/validate",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"{{forgetPasswordUrl}}",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change-password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mualimsyahrido@gmail.com\",\r\n    \"newPassword\": \"newpassword\",\r\n    \"otp\": \"374951\",\r\n    \"confirmPassword\": \"newpassword\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/{{forgetPasswordUrl}}/change-password",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"{{forgetPasswordUrl}}",
+										"change-password"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "file",
+			"item": [
+				{
+					"name": "upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6Im11YWxpbXN5YWhyaWRvQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDA5MjI3MDMsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJ2aFMzVDJKeWx3b0lDTU0xWnpjaHF4Ulg3RG8iLCJjbGllbnRfaWQiOiJteS1jbGllbnQtd2ViIn0.AYFi2yD73UlKSiGdHm_JFzqinzENJ5CYC_AcHAivpeQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/IDStar/Downloads/hq720_2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/{{fileUrl}}/upload",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{fileUrl}}",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyLXJlc291cmNlIl0sInVzZXJfbmFtZSI6Im11YWxpbXN5YWhyaWRvQGdtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE3MDA5MjI5NDIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJrZkl2UDlOM3F2WE0teFhvT1ppZmo2cTllQjAiLCJjbGllbnRfaWQiOiJteS1jbGllbnQtd2ViIn0.G5z_9_xTtxf1v6kLhjTUGLHCnWU6gM---suBEG8Q69o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/{{fileUrl}}/show-file/25112023013900.jpg",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"{{fileUrl}}",
+								"show-file",
+								"25112023013900.jpg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
@@ -543,7 +883,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "http://localhost:8081",
+			"value": "http://localhost:8080",
 			"type": "string"
 		},
 		{
@@ -564,6 +904,26 @@
 		{
 			"key": "karyawanTrainingUrl",
 			"value": "api/v1/karyawan-trainings",
+			"type": "string"
+		},
+		{
+			"key": "registerUrl",
+			"value": "api/v1/user-register",
+			"type": "string"
+		},
+		{
+			"key": "loginUrl",
+			"value": "api/v1/user-login",
+			"type": "string"
+		},
+		{
+			"key": "forgetPasswordUrl",
+			"value": "api/v1/forget-password",
+			"type": "string"
+		},
+		{
+			"key": "fileUrl",
+			"value": "api/v1/file",
 			"type": "string"
 		}
 	]

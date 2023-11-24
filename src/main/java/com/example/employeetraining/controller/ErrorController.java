@@ -1,9 +1,6 @@
 package com.example.employeetraining.controller;
 
-import com.example.employeetraining.exception.NotMatchPasswordException;
-import com.example.employeetraining.exception.TokenExpiredException;
-import com.example.employeetraining.exception.UserAlreadyExistsException;
-import com.example.employeetraining.exception.UserNotFoundException;
+import com.example.employeetraining.exception.*;
 import com.example.employeetraining.model.response.GeneralResponse;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
@@ -66,5 +63,11 @@ public class ErrorController extends ResponseEntityExceptionHandler {
     public ResponseEntity<Object> tokenExpiredException(TokenExpiredException exception) {
         log.error("Error: {}", exception.getMessage(), exception);
         return new ResponseEntity<>(new GeneralResponse<>(401, exception.getMessage(), "UNAUTHORIZED"), HttpStatus.UNAUTHORIZED);
+    }
+
+    @ExceptionHandler(FileStorageException.class)
+    public ResponseEntity<Object> fileStorageException(FileStorageException exception) {
+        log.error("Error: {}", exception.getMessage(), exception);
+        return new ResponseEntity<>(new GeneralResponse<>(404, exception.getMessage(), "NOT_FOUND"), HttpStatus.NOT_FOUND);
     }
 }
