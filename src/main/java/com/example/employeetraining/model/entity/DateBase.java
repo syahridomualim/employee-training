@@ -1,9 +1,9 @@
 package com.example.employeetraining.model.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.MappedSuperclass;
 import lombok.*;
 
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
 import java.util.Date;
 
 @MappedSuperclass

@@ -6,13 +6,16 @@ import com.example.employeetraining.model.request.UpdateKaryawanTrainingRequest;
 import com.example.employeetraining.model.response.GeneralResponse;
 import com.example.employeetraining.model.response.KaryawanTrainingResponse;
 import com.example.employeetraining.service.KaryawanTrainingService;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
+
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/karyawan-trainings")
+@SecurityRequirement(name = "Bearer Authentication")
 @RequiredArgsConstructor
 public class KaryawanTrainingController {
 
